@@ -1,0 +1,320 @@
+:root {
+    --bg-card: #1A1A1E;      /* Fundo dos produtos */
+    --text-primary: #F4E3E6; /* Cor dos textos */
+    --text-muted: #D4A5B1;   /* Textos secundários */
+    --action-color: #C81D3B; /*Fundo da Página*/
+    --text-pink:#f472ba; /*Rosa Quartzo*/
+}
+
+body {
+    background-color: #0F0F12;
+    color: var(--text-primary);
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--bg-card); 
+    color: var(--text-pink); 
+    padding:20px;
+    text-align: center;
+}
+
+section article {
+    background-color: var(--bg-card);
+    border-radius: 8px;
+    overflow: hidden;
+    padding-bottom: 20px;
+    margin: 10px;
+    border-radius: 8px; 
+    display: flex;
+    flex-direction: column; /* Organiza os elementos um abaixo do outro*/
+    justify-content: flex-start;
+}
+
+section {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, 300px); 
+    justify-content: center; 
+    gap: 3px; 
+    padding: 40px 20px;
+    max-width: 1200px; /* Limita a largura máxima da vitrine inteira */
+    margin: 0 auto;    /* Centraliza a vitrine na tela */
+}
+
+section article h3, section article p {
+    text-align: center;
+    white-space: nowrap;
+    margin: 8px 0px;
+    color: var(--text-primary);
+    
+}
+.img-produto {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+    display: block;
+}
+
+.btn-contato {
+    display: block;
+    margin: 0 auto;
+    background-color: var(--action-color); 
+    color: #FFFFFF; 
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bolder;
+    cursor: pointer;   
+}
+
+.btn-contatoWapp {
+    
+    margin: 0 auto;
+    background-color: var(--action-color); 
+    color: #FFFFFF; 
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bolder;
+    cursor: pointer;   
+}
+
+footer {
+    text-align: center;
+}
+
+/* --- ESTILOS DO CARRINHO (ADAPTADOS) --- */
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+.cart-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: relative;
+    padding: 5px;
+}
+
+#cart-count {
+    position: absolute;
+    top: -5px;
+    right: -8px;
+    background-color: #4a154b; /* Tom elegante de roxo/vinho */
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 2px 6px;
+    border-radius: 50%;
+    font-family: sans-serif;
+}
+
+/* Alinhamento dos botões nos cards */
+.product-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: auto;
+}
+
+.btn-add-cart {
+    background-color: #4a154b;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+
+.btn-add-cart:hover {
+    opacity: 0.9;
+}
+
+/* ESTRUTURA DA SIDEBAR */
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 350px;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 1000;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.cart-sidebar.open {
+    transform: translateX(0);
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem;
+    border-bottom: 1px solid #eee;
+    color: #222;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #555;
+}
+
+.cart-items {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1.2rem;
+    color: #333;
+}
+
+.empty-message {
+    text-align: center;
+    color: #777;
+    margin-top: 2rem;
+}
+
+.cart-footer {
+    padding: 1.2rem;
+    border-top: 1px solid #eee;
+    background-color: #f9f9f9;
+}
+
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #222;
+}
+
+.checkout-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #25D366; /* Verde do WhatsApp para combinar com seu botão de baixo */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.checkout-btn:hover {
+    background-color: #1ebd58;
+}
+
+/* OVERLAY (Fundo Escurecido) */
+.cart-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 999;
+    display: none;
+}
+
+.cart-overlay.open {
+    display: block;
+}
+
+@media (max-width: 360px) {
+    .cart-sidebar { width: 100%; }
+}
+/* --- ESTILOS DO MODAL DE DETALHES --- */
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo escurecido */
+    z-index: 2000; /* Fica acima de tudo */
+    display: none; /* Escondido por padrão */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Quando o JS adicionar a classe 'open', o modal aparece */
+.modal-container.open {
+    display: flex;
+}
+
+.modal-content {
+    background-color: #fff;
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    animation: abrirModal 0.3s ease-out;
+}
+
+@keyframes abrirModal {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #555;
+}
+
+.modal-content h2 {
+    color: #4a154b;
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-right: 25px;
+}
+
+.modal-preco {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+.modal-info-group {
+    margin-bottom: 15px;
+}
+
+.modal-label {
+    font-weight: bold;
+    color: #4a154b;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 3px;
+}
+
+.modal-info-group p {
+    margin: 0;
+    color: #444;
+    font-size: 1rem;
+    line-height: 1.4;
+}

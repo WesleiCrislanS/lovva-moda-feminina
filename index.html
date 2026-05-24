@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lovva</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Lovva</h1>
+        <nav>
+            <!-- Adicionamos o botão do carrinho dentro do seu nav existente -->
+            <button id="cart-icon-btn" class="cart-btn">
+                🛒 <span id="cart-count">0</span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <article>
+                <img src="imagens/lingeriePret.jpg" alt="LingerieLovva" class="img-produto">
+                <h3>Lingerie Preta</h3>
+                <p>R$ 50,00<br></p>
+                <div class="product-actions">
+                    <button class="btn-contato btn-sobre" data-name="Conjunto Lace Noir Premium" data-price="50.00"
+                        data-material="Renda Chantilly francesa com elastano de alta memória e forro íntimo 100% algodão antialérgico"
+                        data-entrega="Envio totalmente discreto em caixa descaracterizada ou retirada imediata na loja">Sobre</button>
+                    <!-- Atributos data- guardam as informações que o JS vai ler -->
+                    <button class="btn-add-cart" data-name="Lingerie Preta" data-price="50.00">Adicionar</button>
+                </div>
+            </article>
+
+            <article>
+                <img src="imagens/cremeHidra.jpg" alt="Creme Hidratante" class="img-produto">
+                <h3>Creme Hidratante Erva Doce</h3>
+                <p>R$ 28,00</p>
+                <div class="product-actions">
+                    <button class="btn-contato btn-sobre" data-name="Creme Hidratante Erva Doce (80g)"
+                        data-price="28.00"
+                        data-material="Fórmula dermocalmante, ação antitranspirante invisível e livre de álcool"
+                        data-entrega="Prazo de entrega calculado no carrinho de acordo com o seu CEP">Sobre</button>
+                    <!-- Atributos data- guardam as informações que o JS vai ler -->
+
+                    <button class="btn-add-cart" data-name="Creme Hidratnte" data-price="28.00">Adicionar</button>
+                </div>
+            </article>
+
+            <article>
+                <img src="imagens/batomVerm.jpg" class="img-produto">
+                <h3>Batom Matte Velvet Red</h3>
+                <p>R$ 35,00</p>
+                <div class="product-actions">
+                    <button class="btn-contato btn-sobre" data-name="Batom Matte Velvet Red" data-price="35.00"
+                        data-material="Acabamento Matte aveludado, alta pigmentação e enriquecido com Vitamina E "
+                        data-entrega="Disponível para entrega imediata via motoboy ou Correios">Sobre</button>
+                    <!-- Atributos data- guardam as informações que o JS vai ler -->
+
+                    <button class="btn-add-cart" data-name="Batom Vermelho" data-price="35.00">Adicionar</button>
+                </div>
+            </article>
+
+            <article>
+                <img src="imagens/roupaBai.jpg" alt="roupabai" class="img-produto">
+                <h3>Conjunto de Lingerie Amarela</h3>
+                <p>R$ 59,90</p>
+                <div class="product-actions">
+                    <button class="btn-contato btn-sobre" data-name="Conjunto Renda Sublime Amarelo" data-price="59.90"
+                        data-material="Renda Jacquard com forro 100% Algodão e elastano de alta memória"
+                        data-entrega="Envio expresso para todo o Brasil ou retirada em mãos em até 2 horas">Sobre
+                    </button>
+                    <!-- Atributos data- guardam as informações que o JS vai ler -->
+
+                    <button class="btn-add-cart" data-name="Roupa Intima" data-price="59.90">Adicionar</button>
+                </div>
+            </article>
+
+            <article>
+                <img src="imagens/perfumeSwe.jpg" alt="perfumesweetfloral" class="img-produto">
+                <h3>Perfume Sweet Opal</h3>
+                <p>R$ 120,00</p>
+                <div class="product-actions">
+                    <button class="btn-contato btn-sobre" data-name="Perfume Sweet Opal" data-price="120.00"
+                        data-material="Fragrância Floral Frutal com notas de saída cítricas e fundo adocicado"
+                        data-entrega="Embalagem especial para presente com envio protegido contra impactos">Sobre
+                    </button>
+                    <!-- Atributos data- guardam as informações que o JS vai ler -->
+
+                    <button class="btn-add-cart" data-name="Perfume Sweet Opal" data-price="120.00">Adicionar</button>
+                </div>
+            </article>
+
+            <article>
+                <img src="imagens/kiMaquia.jpg" alt="kitmaquiagem" class="img-produto">
+                <h3>Kit de Maquiagem Completo</h3>
+                <p>R$ 199,90</p>
+                <div class="product-actions">
+                    <button class="btn-contato btn-sobre" data-name="Kit Essentials Glam Venus" data-price="199.90"
+                        data-material="Combo composto por 2 Máscaras de Cílios HD, 2 Batons Cremosos, 1 Lápis de Boca, 1 Iluminador e 1 Base Fluida"
+                        data-entrega="Frete grátis para todo o país e embalagem protetora premium">Sobre</button>
+                    <!-- Atributos data- guardam as informações que o JS vai ler -->
+
+                    <button class="btn-add-cart" data-name="Kit de Maquiagem" data-price="199.90">Adicionar</button>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <a href="link-do-whatsapp-aqui" class="btn-contatoWapp">Fale com uma Consultora</a>
+
+    <!-- ESTRUTURA DO CARRINHO LATERAL (Adicionada) -->
+    <aside id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Seu Carrinho</h2>
+            <button id="close-cart-btn" class="close-btn">&times;</button>
+        </div>
+
+        <div id="cart-items-container" class="cart-items">
+            <p class="empty-message">Seu carrinho está vazio.</p>
+        </div>
+
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-value">R$ 0,00</span>
+            </div>
+            <button class="checkout-btn">Finalizar via WhatsApp</button>
+        </div>
+    </aside>
+
+    <!-- Fundo escuro quando o carrinho abre -->
+    <div id="cart-overlay" class="cart-overlay"></div>
+
+    <!-- ESTRUTURA DO MODAL DE DETALHES (Novo) -->
+    <div id="product-modal" class="modal-container">
+        <div class="modal-content">
+            <button id="close-modal-btn" class="modal-close-btn">&times;</button>
+
+            <h2 id="modal-nome">Nome do Produto</h2>
+            <p id="modal-preco" class="modal-preco">R$ 0,00</p>
+
+            <div class="modal-info-group">
+                <span class="modal-label">Loja Oficial:</span>
+                <p id="modal-loja">Lovva</p>
+            </div>
+
+            <div class="modal-info-group">
+                <span class="modal-label">Material / Tecido:</span>
+                <p id="modal-material">Não informado</p>
+            </div>
+
+            <div class="modal-info-group">
+                <span class="modal-label">Opções de Entrega:</span>
+                <p id="modal-entrega">Não informado</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy;Lovva</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
